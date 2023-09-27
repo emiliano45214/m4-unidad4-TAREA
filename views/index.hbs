@@ -1,0 +1,17 @@
+<h1>{{title}}</h1>
+{{#if conocido}}
+<p>Hola {{ nombre}} has iniciado sesion <a href="/salir">salir</a></p>
+{{/if}}
+{{#unless conocido}}
+    <p>no has iniciado sesion por favor ingrese su nombre y su edad (le recordamos que debe ser mayor de edad para poder iniciar sesion!)</p>
+    <form action="/ingresar" method="post">
+    <label for="nombree">Nombre:</label>
+        <input type="text" name="nombre" id="nombree">
+        <br>
+        <br>
+        <label for="edadd">Edad:   </label>
+        <input type="number" name="edad" id="edadd">
+        <br><br>
+        <button>ingresar</button>
+    </form>
+{{/unless}}
